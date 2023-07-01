@@ -35,6 +35,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  user-select: none;
 }
 
 /* A elements that don't have a class get default styles */
@@ -70,7 +71,7 @@ select {
 
 body{
     font-family: 'Lato', sans-serif;
-    background-color: white;
+    background-color: rgb(236, 236, 236);
     display:flex;
     align-items: center;
     justify-content: center;
@@ -78,10 +79,19 @@ body{
 
 main{
     max-width: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+
+}
+
+.main-section{
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 h2{
-    font-size: 5rem;
+    font-size: 3rem;
     margin-right: 20px;
 }
 
@@ -92,11 +102,16 @@ ul, li{
 
 }
 
+li{
+    padding: 10px 0px;
+}
+
 .menu-item{
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #D2D2D2;
+
 }
 
 .item{
@@ -104,23 +119,24 @@ ul, li{
 }
 
 .item-title{
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
 
 .item-description{
-    font-size: 1rem;
+    font-size: .875rem;
     font-style: italic;
     color: rgb(148, 147, 147);
 }
 
 .item-price{
-    font-size: 1.10rem;
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 
 .select-button{
-    height: 60px;
-    width: 60px;
+    height: 30px;
+    width: 30px;
     border-radius: 50%;
     border: 1.5px solid #DEDEDE;
     background-color: white;
@@ -130,4 +146,57 @@ ul, li{
 .select-button:hover{
     cursor: pointer;
     background-color: #DEDEDE;
+}
+
+.order-details{
+    height:400px;
+    margin-top: 15px;
+}
+
+.final-price{
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid black;
+    padding-top: 10px; 
+}
+
+.total-price{
+    font-weight: 700;
+}
+
+.complete-order-btn{
+    color: white;
+    border: none;
+    background-color: #16DB99;
+    font-weight: 700;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    letter-spacing: 1.5px;
+    margin-top: 20px;
+}
+
+.complete-order-btn:hover{
+    background-color: #14bb83;
+    cursor: pointer;
+}
+
+
+.ordered-item{
+    display:flex;
+    justify-content: space-between;
+    font-style: italic;
+}
+
+.remove-btn{
+    margin-right: auto;
+    border: none;
+    background-color: transparent;
+    color: rgb(148, 147, 147);
+    font-style: normal;
+}
+
+.remove-btn:hover{
+    color: #14bb83;
+    cursor: pointer;
 }
