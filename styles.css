@@ -25,6 +25,14 @@ ol[role='list'] {
   list-style: none;
 }
 
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
@@ -158,6 +166,7 @@ li{
     justify-content: space-between;
     border-top: 2px solid black;
     padding-top: 10px; 
+    margin-top: 20px;
 }
 
 .total-price{
@@ -176,6 +185,24 @@ li{
     margin-top: 20px;
 }
 
+.complete-payment-btn{
+    color: white;
+    border: none;
+    background-color: #16DB99;
+    font-weight: 700;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    letter-spacing: 1.5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.complete-payment-btn:hover{
+    background-color: #14bb83;
+}
+
+
 .complete-order-btn:hover{
     background-color: #14bb83;
     cursor: pointer;
@@ -186,6 +213,7 @@ li{
     display:flex;
     justify-content: space-between;
     font-style: italic;
+    padding: 0;
 }
 
 .remove-btn{
@@ -199,4 +227,38 @@ li{
 .remove-btn:hover{
     color: #14bb83;
     cursor: pointer;
+}
+
+.card-details-modal{
+    text-align: center;
+    max-width: 500px;
+    padding: 25px;
+    border-radius: 10px;
+    position: fixed;
+    background-color: white;
+    box-shadow: 5px 5px 255px 0px hsla(0, 0%, 0%, 0.5);
+    margin: auto 15px;
+    display: none;
+}
+
+input{
+    color: #757575;
+    border: 2px solid #757575;
+    font-weight: 700;
+    padding: 15px;
+    width: 100%;
+    border-radius: 4px;
+    letter-spacing: 1.5px;
+    margin-top: 20px;
+}
+
+.thank-you{
+    background-color: hsla(152, 81%, 96%, 1);
+    margin-top: 25px;
+    text-align: center;
+    display: none;
+}
+
+.thank-you-msg{
+    padding: 35px 25px;
 }

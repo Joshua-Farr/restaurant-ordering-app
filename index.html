@@ -26,33 +26,31 @@
 
                     </li> -->
                 </ul>
-                <div class="order-details" id="order-details">
-                    <h3>Your Order:</h3>
-                    <ul id="order-details">
-                        <li class="ordered-item">
-                            <p class="">Lorem ipsum dolor sit.</p>
-                            <button class="remove-btn">remove</button>
-                            <p class="ordered-price">$12</p>
-                        </li>
-                        <li class="ordered-item">
-                            <p class="">Lorem ipsum dolor sit.</p>
-                            <button class="remove-btn">remove</button>
-                            <p class="ordered-price">$12</p>
-                        </li>
-                        <li class="ordered-item">
-                            <p class="">Lorem ipsum dolor sit.</p>
-                            <button class="remove-btn">remove</button>
-                            <p class="ordered-price">$12</p>
-                        </li>
-                    </ul>   
-                    <div class="final-price">
-                        <h3 class="item-price">Total Price:</h3>
-                        <h3 id="total-price">$12</h3>
-                    </div>
-                    <button class="complete-order-btn" id="complete-order-btn">Complete order</button>
+                <div class="thank-you" id="thank-you">
+                    <h3 class="thank-you-msg" id="thank-you-msg">Thanks! Your order is on its way!</h3>
                 </div>
+                <div class="order-details" id="order-details">
+                    <ul id="order-details">
+
+                    </ul>   
+ 
+                </div>
+               
             </div>
+
+
         </main>
+        <div class="card-details-modal" id="card-details-modal">
+            <h3>Enter Card Details</h3>
+            <form>
+                <input type="text" placeholder="Enter your name" required>
+                <input type="number" placeholder="Enter card number" required minlength="16">
+                <input type="number" placeholder="Enter CVV" required minlength="3" maxlength="3">
+                <button class="complete-payment-btn" id="complete-payment-btn">Pay</button>
+            </form>
+
+        </div>
+
     </body>
 
     <script src="script.js" type="module"></script>
