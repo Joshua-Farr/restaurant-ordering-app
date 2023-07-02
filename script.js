@@ -3,6 +3,7 @@ import { menuArray } from "./data.js"
 const menu = document.getElementById("menu");
 const paymentModal = document.getElementById("card-details-modal");
 const thankYouScreen = document.getElementById("thank-you");
+
 let orderDetails = document.getElementById("order-details");
 
 let order = [];
@@ -14,19 +15,11 @@ document.addEventListener('click', function(e){
         addItem(e.target.dataset.id);
         renderOrder();
     }else if(e.target.id === "complete-order-btn"){
-        paymentModal.style.display = "block"
-        console.log("Trying to display modal!")
+        paymentModal.style.display = "block";
     }else if(e.target.id === "remove-btn"){
-        //removeItem(itemId);
-        console.log("trying to remove!",e.target.dataset.orderedid);
         removeItem(e.target.dataset.orderedid);
     }else if(e.target.id=== "complete-payment-btn"){
-        e.preventDefault();
-        console.log("Closing");
-        orderDetails.innerHTML="";
-        paymentModal.style.display = "none";
-        thankYouScreen.style.display = "block";
-        //thankYou();
+        completePayment(e);
     }
 })
 
@@ -82,9 +75,19 @@ function removeItem(itemId){
     renderOrder();
 }
 
-// function thankYou(){
-//     document.getElementById("thank-you").style.display = "block";
-    
-// }
+function completePayment(e){
+    e.preventDefault();
+    paymentModal.style.display = "none";
+    const paymentDetails = document.getElementById("payment-details");
+    const thankYouSection = document.getElementById("thank-you");
+    const userData = new FormData(paymentDetails);
+
+    const name = userData.get("fullName");
+    thankYouSection.innerHTML = 
+                `<h3 class="thank-you-msg" id="thank-you-msg">Thanks ${name}! Your order is on its way!</h3>`
+    thankYouScreen.style.display = "block";
+    orderDetails.innerHTML="";
+    orderDetails.style.height = 0;
+}
 
 renderMenu();

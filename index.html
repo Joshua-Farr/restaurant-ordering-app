@@ -26,14 +26,18 @@
 
                     </li> -->
                 </ul>
+
                 <div class="thank-you" id="thank-you">
-                    <h3 class="thank-you-msg" id="thank-you-msg">Thanks! Your order is on its way!</h3>
+                    <!-- <h3 class="thank-you-msg" id="thank-you-msg">Thanks! Your order is on its way!</h3> -->
                 </div>
                 <div class="order-details" id="order-details">
                     <ul id="order-details">
 
                     </ul>   
  
+                </div>
+                <div class="thank-you" id="thank-you">
+                    <!-- <h3 class="thank-you-msg" id="thank-you-msg">Thanks! Your order is on its way!</h3> -->
                 </div>
                
             </div>
@@ -42,10 +46,10 @@
         </main>
         <div class="card-details-modal" id="card-details-modal">
             <h3>Enter Card Details</h3>
-            <form>
-                <input type="text" placeholder="Enter your name" required>
-                <input type="number" placeholder="Enter card number" required minlength="16">
-                <input type="number" placeholder="Enter CVV" required minlength="3" maxlength="3">
+            <form id="payment-details">
+                <input type="text" placeholder="Enter your name" id="user-name" name="fullName" required>
+                <input type="number" placeholder="Enter card number" required name="creditCard" minlength="16">
+                <input type="number" placeholder="Enter CVV" required name="cvv" minlength="3" maxlength="3">
                 <button class="complete-payment-btn" id="complete-payment-btn">Pay</button>
             </form>
 
